@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Masaraq - University Recommendation System{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Masarak</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('upload_diploma') }}">Upload Diploma</a></li>
+                <li><a href="{{ url_for('manual_entry') }}">Manual Entry</a></li>
+                <li><a href="{{ url_for('demographics_entry') }}">Demographics Entry</a></li>
+                <li><a href="{{ url_for('interest_assessment') }}">Interest Assessment</a></li>
+                <li><a href="{{ url_for('recommendations') }}">Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Masarak. All rights reserved.</p>
+    </footer>
+</body>
+</html>
