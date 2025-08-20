@@ -5,7 +5,8 @@ import json
 from typing import Dict, List, Optional
 from google import genai
 
-GEMINI_API_KEY = "AIzaSyBAeyNJirU1UEqsBNs7jSMMhqzvOPVYJ-Y"
+GEMINI_API_KEY = "AIzaSyAi0-7aJM20Jt3mhVPfkmBx91x8gXFAt0E"
+
 
 
 class DiplomaScanner:
@@ -202,7 +203,7 @@ CORE_SUBJECTS_PER_BRANCH_English: Dict[str, List[str]] = {
 
     def _ask_gemini_once(self, text: str) -> str:
         response = self.client.models.generate_content(
-            model="gemini-2.5-pro",
+            model="gemini-2.5-flash",
             contents=text
         )
         return response.text.strip()
