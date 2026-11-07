@@ -1,3 +1,4 @@
+import os
 import cv2
 import easyocr
 import re
@@ -5,7 +6,7 @@ import json
 from typing import Dict, List, Optional
 from google import genai
 
-GEMINI_API_KEY = "AIzaSyAi0-7aJM20Jt3mhVPfkmBx91x8gXFAt0E"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 
 
